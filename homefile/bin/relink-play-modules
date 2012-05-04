@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [[ -e modules && -e conf ]] ; then
+    echo "Convert module link-file to soft-link"
+else
+    echo "Not a play project, please cd to play project directory."
+    exit 1
+fi
+
+rm -Rf modules
+play deps --sync --clearcache
+cd modules
+
+for file in *
+do
+    if test -f $file
+    then
+        echo $file
+        TARGET=`cat $file`
+        rm $file
+        ln -s $TARGET $file
+    fi
+done
+
+echo "Done."

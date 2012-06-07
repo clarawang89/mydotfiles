@@ -52,10 +52,18 @@ use_hotkeys=yes
 window_tiling=no
 
 # ================ clusters define ================
-clusters=devapp devplay jenkins jenkinsslave
+clusters=devapp devplay jenkins jenkinsslave prolb proapp0 proapp1 proapp prodb procas
 
 devplay=root@192.168.18.223 root@192.168.18.224 root@192.168.18.225
 devapp=root@192.168.18.222 devplay
 
-jenkinsslave=root@192.168.18.71 root@192.168.18.72 root@192.168.18.73 root@192.168.18.74 root@192.168.18.75
-jenkins=root@192.168.18.239 jenkinsslave 
+jenkinsslave=root@192.168.18.71 root@192.168.18.72 root@192.168.18.73 root@192.168.18.74 root@192.168.18.75 root@192.168.18.61
+jenkins=root@192.168.18.239 jenkinsslave
+
+
+prolb=root@192.168.100.102 root@192.168.100.103
+proapp0=root@192.168.100.121 root@192.168.100.122 root@192.168.100.123 root@192.168.100.124
+proapp1=root@192.168.100.131 root@192.168.100.132 root@192.168.100.133 root@192.168.100.134
+procas=root@192.168.100.121 root@192.168.100.131
+proapp=proapp0 proapp1
+prodb=root@192.168.100.161 root@192.168.100.162

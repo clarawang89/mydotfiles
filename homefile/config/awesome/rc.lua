@@ -20,6 +20,13 @@ require("util")
 -- beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 
+require("menubar")
+menubar.cache_entries = true
+menubar.app_folders = { "/usr/share/applications/" }
+menubar.show_categories = true   -- Change to false if you want only programs to appear in the menu
+menubar.set_icon_theme("theme name")
+
+
 -- This is used later as the default terminal and editor to run.
 terminal = "start-tmux"
 editor = os.getenv("EDITOR") or "nano"
@@ -378,7 +385,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f", function () run_or_raise("firefox", { class = "Firefox" }) end),
     awful.key({ modkey,           }, "w", function () run_or_raise("google-chrome", { class = "Google-chrome" }) end),
     awful.key({ modkey,           }, "p", function () run_or_raise("pidgin", { class = "Pidgin" }) end),
-
+    awful.key({ modkey }, "s", function () menubar.show() end),
 
     -- CHANGE: 更好的dmenu
     awful.key({modkey }, "o", function() awful.util.spawn( "smart-dmenu" ) end),

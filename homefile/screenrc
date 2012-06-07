@@ -77,11 +77,8 @@ bind ^e screen -t emacs 0 emacsclient -nw
 
 chdir
 
-screen -t emacs 0 emacsclient -nw
 screen -t shell1 1
 screen -t shell2 2
-screen -t output 3
-screen -t log 4
 
 select 1
 

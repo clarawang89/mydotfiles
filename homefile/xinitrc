@@ -11,7 +11,7 @@
 
 
 # for fcitx, see: https://wiki.archlinux.org/index.php/Fcitx
-# eval `dbus-launch --sh-syntax --exit-with-session`
+eval `dbus-launch --sh-syntax --exit-with-session`
 
 ################  FCITX ################
 export XMODIFIERS="@im=fcitx"

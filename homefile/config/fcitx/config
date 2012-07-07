@@ -36,7 +36,7 @@ HideInputWindowWhenOnlyOneCandidate=False
 # 快捷键: 切换输入法
 TriggerKey=SHIFT_SPACE
 # 快捷键: 切换中英文输入
-SwitchKey=L_CTRL
+SwitchKey=R_CTRL
 # 双击中英文切换键时切换
 DoubleSwitchKey=False
 # 输入间隔

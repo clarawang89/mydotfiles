@@ -4504,11 +4504,11 @@ if [[ -d $HOME/.zsh.d ]]; then
   done
 fi
 
-
+export JAVA_HOME=/opt/jdk7
+export CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
 export M2_HOME=/opt/maven
 export MAVEN_OPTS="-Dmaven.artifact.threads=3 -Xmx768m"
-export PATH=$PATH:$M2_HOME/bin
-
+export PATH=/opt/play-1.2.4:$JAVA_HOME/bin:$PATH:$M2_HOME/bin
 
 export BUILD_ENV_CODE=linuxdev
 

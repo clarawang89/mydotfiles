@@ -1,0 +1,10 @@
+#!/bin/bash
+CUR_BR=`git branch | grep "*"  | awk '{ print $2 }'`
+echo "Current Branch: $CUR_BR"
+git fetch origin
+git fetch upstream
+git checkout develop
+git merge upstream/develop
+git push origin develop
+git checkout $CUR_BR
+

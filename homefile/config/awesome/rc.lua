@@ -660,6 +660,8 @@ end
 util.run_once('dropbox', 'dropboxd')
 -- util.run_once('nm-applet')
 util.run_once('pidgin')
+util.run_once('nm-applet')
+util.run_once('gnome-sound-applet')
 -- util.run_once('gol')
 
 -- run screen-saver when idle 10 minutes.
